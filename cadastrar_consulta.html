@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu-lateral.css">
 </head>
-    
-
 <body>
     <nav id="menu-lateral">
         <span class="btn-accordion">
@@ -37,23 +35,14 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script>
-            $(".btn-accordion").on("click", () => {
-                $(".btn-accordion img").toggleClass("invert");
-                $("#menu-lateral").toggleClass("hidden");
-            })
-        </script>
+        <script src="script-navbar.js"></script>
     </nav>
-
-
-    <header>
-        <div class="header-content">
-            <h1><img src="./assets/imagem_cadastrar_consulta.png" alt="Consultas"> Cadastrar nova consulta </h1>
-        </div>
-    </header>
-    
     <main>
-     
+        <header>
+            <div class="header-content">
+                <h1><img src="./assets/imagem_cadastrar_consulta.png" alt="Consultas"> Cadastrar nova consulta </h1>
+            </div>
+        </header>
         <div class="section-wrapper">
             <div class="filter-section">
                 <h1>Escolha a <span style="color: #5978E5;">especialidade</span> e siga sua prioridade. <br> Os profissionais serão listados por <span style="color: #5978E5;">ordem de disponibilidade</span></h1>

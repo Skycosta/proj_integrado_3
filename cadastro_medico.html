@@ -35,22 +35,14 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script>
-            $(".btn-accordion").on("click", () => {
-                $(".btn-accordion img").toggleClass("invert");
-                $("#menu-lateral").toggleClass("hidden");
-            })
-        </script>
+        <script src="script-navbar.js"></script>
     </nav>
-
-    <header>
-        <div class="header-content">
-            <h1><img src="./assets/imagem_pacientes.png" alt="Consultas"> Cadastrar novo paciente </h1>
-        </div>
-    </header>
-    
     <main>
-     
+        <header>
+            <div class="header-content">
+                <h1><img src="./assets/imagem_pacientes.png" alt="Consultas"> Cadastrar novo paciente </h1>
+            </div>
+        </header>
         <div class="section-wrapper">
             <div class="filter-section">
                 <h1>Dados Pessoais</h1>
@@ -81,7 +73,6 @@
                     </div>    
                 </div>
             </div>
-
             <div class="filter-section">
                 <h1>Dados de Contato</h1>
                 <div class="filter-container">
@@ -117,10 +108,10 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <button class="cadastrar-button"> <a href="./cadasto_sucesso.html">Cadastrar médico</a></button>
+            <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
+        </footer>
     </main>
-    <footer>
-        <button class="cadastrar-button"> <a href="./cadasto_sucesso.html">Cadastrar médico</a></button>
-        <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
-    </footer>
 </body>
 </html>

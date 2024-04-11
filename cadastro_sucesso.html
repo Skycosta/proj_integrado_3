@@ -36,23 +36,14 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script>
-            $(".btn-accordion").on("click", () => {
-                $(".btn-accordion img").toggleClass("invert");
-                $("#menu-lateral").toggleClass("hidden");
-            })
-        </script>
-    </nav>
-
-
-    <header>
-        <div class="header-content">
-            <h1><img src="./assets/imagem_cadastrar_consulta.png" alt="Consultas"> Novo Cadastro </h1>
-        </div>
-    </header>
-    
+        <script src="script-navbar.js"></script>
+    </nav>    
     <main>
-     
+        <header>
+            <div class="header-content">
+                <h1><img src="./assets/imagem_cadastrar_consulta.png" alt="Consultas"> Novo Cadastro </h1>
+            </div>
+        </header>
         <div class="section-wrapper">
             <div class="filter-section">
                 <H1><img src="./assets/cadastro_sucesso.png" alt="Cadastro-com-sucesso"></H1>
@@ -61,10 +52,10 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <button class="cadastrar-button"><a href="index.html">Voltar</a></button>
+            <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
+        </footer>
     </main>
-    <footer>
-        <button class="cadastrar-button"><a href="index.html">Voltar</a></button>
-        <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
-    </footer>
 </body>
 </html>

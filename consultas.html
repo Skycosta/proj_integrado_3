@@ -7,12 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
-    <title>Portal Med</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu-lateral.css">
+    <title>Portal Med</title>
 </head>
-    
-
 <body>
     <nav id="menu-lateral">
         <span class="btn-accordion">
@@ -37,22 +35,15 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script>
-            $(".btn-accordion").on("click", () => {
-                $(".btn-accordion img").toggleClass("invert");
-                $("#menu-lateral").toggleClass("hidden");
-            })
-        </script>
+        <script src="script-navbar.js"></script>
     </nav>
-
-    <header>
-        <div class="header-content">
-            <h1><img src="./assets/imagem_consultas.png" alt="Consultas"> Consultas </h1>
-        </div>
-    </header>
     
     <main>
-     
+        <header>
+            <div class="header-content">
+                <h1><img src="./assets/imagem_consultas.png" alt="Consultas"> Consultas </h1>
+            </div>
+        </header>
         <div class="section-wrapper">
             <div class="filter-section">
                 <h1>Filtro de Pesquisa</h1>

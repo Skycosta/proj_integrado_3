@@ -15,6 +15,7 @@
     transform: translateX(100%);
     top: 0;
     right: 0;
+    z-index: 999;
 }
 
 #menu-lateral .btn-accordion img {
@@ -29,10 +30,8 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    position: fixed;
-    left: 0;
+    position: sticky;
     top: 0;
-    transition: transform 0.5s ease-in-out;
 }
 
 #menu-lateral .titulo {
@@ -122,5 +121,5 @@
 }
 
 .hidden {
-    transform: translateX(-100%);
+    transform: translateX(-245px);
 }

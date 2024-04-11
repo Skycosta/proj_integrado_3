@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="menu-lateral.css">
     <title>Portal Med</title>
 </head>
@@ -35,34 +37,42 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script>
-            $(".btn-accordion").on("click", () => {
-                $(".btn-accordion img").toggleClass("invert");
-                $("#menu-lateral").toggleClass("hidden");
-            })
-        </script>
+        <script src="script-navbar.js"></script>
     </nav>
     <main>
-        <section class="botao-section">
-            <div class="consulta-div">
-                <a href="./consultas.html">
-                    <img src="./assets/imagem_consultas.png" alt="Consultas">
-                    <h1>Consultas</h1>
-                    <h2></h2> 
-                </a>
-            </div>
-            <div class="paciente-div">
-                <img src="./assets/imagem_pacientes.png" alt="Pacientes">
-                <h1><a href="./cadastro_paciente.html">Cadastrar Pacientes</a></h1>             
-            </div>
-            <div class="paciente-div">
-                <img src="./assets/imagem_pacientes.png" alt="Pacientes">
-                <h1><a href="./cadastro_medico.html">Cadastrar Médicos</a></h1>               
+        <section class="main-container">
+            <div class="cards-container">
+                <div class="col">
+                    <a class="card" href="consultas.html">
+                        <div class="card-body">
+                            <img src="./assets/imagem_consultas.png" alt="Consultas">
+                            <h5>Consultas</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="card" href="cadastro_paciente.html">
+                        <div class="card-body">
+                            <img src="./assets/imagem_pacientes.png" alt="Cadastrar Pacientes">
+                            <h5>Cadastrar Pacientes</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="card" href="cadastro_medico.html">
+                        <div class="card-body">
+                            <img src="./assets/imagem_pacientes.png" alt="Cadastrar Médicos">
+                            <h5>Cadastrar Médicos</h5>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
+        <script>
+        </script>
+        <footer>
+            <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
+        </footer>
     </main>
-    <footer>
-        <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
-    </footer>
 </body>
 </html>

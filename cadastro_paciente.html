@@ -36,14 +36,8 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script>
-            $(".btn-accordion").on("click", () => {
-                $(".btn-accordion img").toggleClass("invert");
-                $("#menu-lateral").toggleClass("hidden");
-            })
-        </script>
+        <script src="script-navbar.js"></script>
     </nav>
-    
     <main>
         <div class="section-wrapper">
             <div class="filter-section">
@@ -107,10 +101,10 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <button class="cadastrar-button"> <a href="./cadasto_sucesso.html">Cadastrar paciente</a></button>
+            <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
+        </footer>
     </main>
-    <footer>
-        <button class="cadastrar-button"> <a href="./cadasto_sucesso.html">Cadastrar paciente</a></button>
-        <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
-    </footer>
 </body>
 </html>

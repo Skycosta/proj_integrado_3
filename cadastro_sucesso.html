@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <title>Portal Med</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-lateral.css">
+</head>
+
+<body>
+    <nav id="menu-lateral">
+        <span class="btn-accordion">
+            <img class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+        </span>
+        <div class="titulo">
+            <span class="dash"></span>
+            <h2>PORTAL MED</h2>
+        </div>
+        <div class="info-atendente">
+            <img src="./assets/imagem_atendente.png" alt="Imagem do Atendente" class="imagem-atendente">
+            <span><h3>Mariana Bittencourt</h3></span>
+            <span class="cargo-atendente">Atendente</span>
+        </div>
+        <hr>
+        <div class="opcoes">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="consultas.html">Consultas</a></li>
+                <li><a href="cadastro_paciente.html">Cadastrar Pacientes</a></li>
+                <li><a href="cadastro_medico.html">Cadastrar Médicos</a></li>
+            </ul>
+            <a href="login.html">Sair</a>
+        </div>
+        <script>
+            $(".btn-accordion").on("click", () => {
+                $(".btn-accordion img").toggleClass("invert");
+                $("#menu-lateral").toggleClass("hidden");
+            })
+        </script>
+    </nav>
+
+
+    <header>
+        <div class="header-content">
+            <h1><img src="./assets/imagem_cadastrar_consulta.png" alt="Consultas"> Novo Cadastro </h1>
+        </div>
+    </header>
+    
+    <main>
+     
+        <div class="section-wrapper">
+            <div class="filter-section">
+                <H1><img src="./assets/cadastro_sucesso.png" alt="Cadastro-com-sucesso"></H1>
+                <h1><span style="color: #5978E5;">Cadastro realizado com sucesso!</span></h1>
+            </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button class="cadastrar-button"><a href="index.html">Voltar</a></button>
+        <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
+    </footer>
+</body>
+</html>

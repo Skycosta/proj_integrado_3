@@ -1,0 +1,126 @@
+#menu-lateral .container-menu-lateral {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+#menu-lateral .btn-accordion {
+    background-color: #5978E5;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 0 0 10px 0;
+    padding: 10px 5px;
+    position: absolute;
+    transform: translateX(100%);
+    top: 0;
+    right: 0;
+}
+
+#menu-lateral .btn-accordion img {
+    width: 20px;
+}
+
+#menu-lateral {
+    width: 270px;
+    height: 100vh;
+    background-color: #5978E5;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+#menu-lateral .titulo {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#menu-lateral .titulo h2 {
+    margin: 0;
+    color: #000;
+}
+
+#menu-lateral .dash {
+    width: 5px;
+    height: 25px;
+    background-color: #B7FAFE;
+    margin-right: 15px;
+}
+
+#menu-lateral .info-atendente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu-lateral h3 {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+#menu-lateral .imagem-atendente {
+    width: 130px;
+}
+
+#menu-lateral .cargo-atendente {
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+#menu-lateral hr {
+    width: 160px;
+    border-color: #B7FAFE;
+}
+
+#menu-lateral .opcoes {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu-lateral ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#menu-lateral a {
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 3px;
+    width: 190px;
+}
+
+#menu-lateral a:hover {
+    background-color: #B7FAFE;
+}
+
+.invert {
+    transform: scaleX(-100%);
+}
+
+.hidden {
+    transform: translateX(-100%);
+}

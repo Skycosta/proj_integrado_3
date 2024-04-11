@@ -3,49 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-lateral.css">
     <title>Portal Med</title>
 </head>
 <body>
-    <div id = "menu-lateral">
-        <nav>
-            <span>
-                PORTAL MED
-            </span>
+    <nav id="menu-lateral">
+        <span class="btn-accordion">
+            <img class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+        </span>
+        <div class="titulo">
+            <span class="dash"></span>
+            <h2>PORTAL MED</h2>
+        </div>
+        <div class="info-atendente">
             <img src="./assets/imagem_atendente.png" alt="Imagem do Atendente" class="imagem-atendente">
-            <a>Mariana Bittencourt</a>
-            <a>Atendente</a>
+            <span><h3>Mariana Bittencourt</h3></span>
+            <span class="cargo-atendente">Atendente</span>
+        </div>
+        <hr>
+        <div class="opcoes">
             <ul>
-                <button><li><a>Início</a></li></button>
-                <button><li><a href="./consultas.html">Consultas</a></li></button>
-                <button><li><a href="./cadastro_paciente.html">Cadastrar Pacientes</a></li></button>
-                <button><li><a href="./cadastro_medico.html">Cadastrar Médicos</a></li></button>
-                <button><li><a href="login.html">Sair</a></li></button>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="consultas.html">Consultas</a></li>
+                <li><a href="cadastro_paciente.html">Cadastrar Pacientes</a></li>
+                <li><a href="cadastro_medico.html">Cadastrar Médicos</a></li>
             </ul>
-        </nav>
-    </div>
+            <a href="login.html">Sair</a>
+        </div>
+        <script>
+            $(".btn-accordion").on("click", () => {
+                $(".btn-accordion img").toggleClass("invert");
+                $("#menu-lateral").toggleClass("hidden");
+            })
+        </script>
+    </nav>
     <main>
         <section class="botao-section">
-            <div class="consulta-div" href="./consultas.html">
+            <div class="consulta-div">
                 <a href="./consultas.html">
-                    <button>
-                        <img src="./assets/imagem_consultas.png" alt="Consultas">
-                        <h1>Consultas</h1>
-                        <h2></h2> 
-                    </button>
+                    <img src="./assets/imagem_consultas.png" alt="Consultas">
+                    <h1>Consultas</h1>
+                    <h2></h2> 
                 </a>
             </div>
             <div class="paciente-div">
-                <button>
-                    <img src="./assets/imagem_pacientes.png" alt="Pacientes">
-                    <h1><a href="./cadastro_paciente.html">Cadastrar Pacientes</a></h1>
-                </button>                
+                <img src="./assets/imagem_pacientes.png" alt="Pacientes">
+                <h1><a href="./cadastro_paciente.html">Cadastrar Pacientes</a></h1>             
             </div>
             <div class="paciente-div">
-                <button>
-                    <img src="./assets/imagem_pacientes.png" alt="Pacientes">
-                    <h1><a href="./cadastro_medico.html">Cadastrar Médicos</a></h1>
-                </button>                
+                <img src="./assets/imagem_pacientes.png" alt="Pacientes">
+                <h1><a href="./cadastro_medico.html">Cadastrar Médicos</a></h1>               
             </div>
         </section>
     </main>

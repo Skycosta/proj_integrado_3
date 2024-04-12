@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <title>Portal Med</title>
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="menu-lateral.css">
-    <title>Portal Med</title>
+    
 </head>
 <body>
+
+    <!-- Início Navbar -->
     <nav id="menu-lateral">
-        <span class="btn-accordion">
-            <img class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+        <span class="btn-accordion" onclick="toggleSidebar()">
+            <img id="arrow-accordion" class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
         </span>
         <div class="titulo">
             <span class="dash"></span>
@@ -37,10 +38,12 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script src="script-navbar.js"></script>
     </nav>
+    <!-- Fim Navbar -->
+
     <main>
         <section class="main-container">
+            <!-- Inicio -->
             <div class="cards-container">
                 <div class="col">
                     <a class="card" href="consultas.html">
@@ -67,12 +70,15 @@
                     </a>
                 </div>
             </div>
+            <!-- Fim -->
         </section>
-        <script>
-        </script>
         <footer>
             <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
         </footer>
     </main>
+
+    <!-- Navbar scripts -->
+    <script src="script-navbar.js"></script>
+
 </body>
 </html>

@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
-    <title>Portal Med</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Portal Med - Cadastrar Pacientes</title>
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="menu-lateral.css">
-</head>
     
+</head>
 <body>
+
+    <!-- Início Navbar -->
     <nav id="menu-lateral">
-        <span class="btn-accordion">
-            <img class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
+        <span class="btn-accordion" onclick="toggleSidebar()">
+            <img id="arrow-accordion" class="invert" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Mostrar/Recolher">
         </span>
         <div class="titulo">
             <span class="dash"></span>
@@ -36,75 +39,89 @@
             </ul>
             <a href="login.html">Sair</a>
         </div>
-        <script src="script-navbar.js"></script>
     </nav>
-    <main>
-        <div class="section-wrapper">
-            <div class="filter-section">
-                <h1>Dados Pessoais</h1>
-                <div class="filter-container">
-                    <div class="filter-element">
-                        <label for="element1">Nome Completo</label>
-                        <input type="text" id="element1" name="element1">
-                    </div>
-                    <div class="filter-element">
-                        <label for="element2">CPF</label>
-                        <input type="text" id="element2" name="element2">
-                    </div>
-                    <div class="filter-element">
-                        <label for="element3">Data de nascimento</label>
-                        <input type="text" id="element3" name="element3">
-                    </div>
-                    <div class="filter-element">
-                        <label for="element4">Endereço</label>
-                        <input type="text" id="element4" name="element4">
-                    </div>
-                    <div class="filter-element">
-                        <label for="element5">Cidade</label>
-                        <input type="text" id="element5" name="element5">
-                    </div>
-                    <div class="filter-element">
-                        <label for="element6">Estado</label>
-                        <input type="text" id="element6" name="element6">
-                    </div>    
-                </div>
-            </div>
+    <!-- Fim Navbar -->
 
-            <div class="filter-section">
-                <h1>Dados de Contato</h1>
-                <div class="filter-container">
-                    <div class="filter-element">
-                        <label for="element1">Telefone</label>
-                        <input type="text" id="element1" name="element1">
+    <main id="app">
+        <section class="main-container">
+            <!-- Inicio -->
+            <header class="cabecalho-pagina">
+                <img src="assets/imagem_pacientes.png" alt="Pacientes">
+                <h1>Pacientes</h1>
+            </header>
+            <section class="section-card">
+                <div class="texto-guia">Filtro de pesquisa</div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="nome">Nome do Paciente</label>
+                        <input id="nome" type="text">
                     </div>
-                    <div class="filter-element">
-                        <label for="element2">Telefone 2</label>
-                        <input type="text" id="element2" name="element2">
+                    <div class="field">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text">
                     </div>
-                    <div class="filter-element">
-                        <label for="element3">E-mail</label>
-                        <input type="text" id="element3" name="element3">
+                    <div class="field">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="rua">Rua</label>
+                        <input id="rua" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="bairro">Bairro</label>
+                        <input id="bairro" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="cidade">Cidade</label>
+                        <input id="cidade" type="text">
                     </div>
                 </div>
-            </div>
-            <div class="filter-section">
-                <h1>Dados Complementares</h1>
-                <div class="filter-container">
-                    <div class="filter-element">
-                        <label for="element1">Convênio</label>
-                        <input type="text" id="element1" name="element1">
-                    </div>
-                    <div class="filter-element">
-                        <label for="element2">Observações de saúde</label>
-                        <input type="text" id="element2" name="element2">
-                    </div>
+                <div class="botoes-filtro">
+                    <button class="btn btn-secondary">Limpar Filtro</button>
+                    <button class="btn btn-primary">Aplicar Filtro</button>
                 </div>
+            </section>
+            <section class="section-card">
+                <div class="texto-guia">Listagem dos Pacientes</div>
+                <table>
+                    <tr class="th">
+                        <td>ID</td>
+                        <td>Paciente</td>
+                        <td>CPF</td>
+                        <td>Telefone</td>
+                        <td>Status</td>
+                        <td></td>
+                    </tr>
+                    <tr v-for="paciente in pacientes" :key="paciente.id">
+                        <td>{{ paciente.id }}</td>
+                        <td>{{ paciente.paciente }}</td>
+                        <td>{{ paciente.cpf }}</td>
+                        <td>{{ paciente.telefone }}</td>
+                        <td>{{ paciente.status }}</td>
+                        <td class="opcoes">
+                            <button><img src="assets/img_edit.png" alt="Editar"></button>
+                            <button><img src="assets/img_printer.png" alt="Imprimir"></button>
+                            <button><img src="assets/img_trash.png" alt="Apagar"></button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <div class="container-marcar-consultas">
+                <button class="btn btn-success">Cadastrar Novo Paciente</button>
             </div>
-        </div>
+            <!-- Fim -->
+        </section>
         <footer>
-            <button class="cadastrar-button"> <a href="./cadasto_sucesso.html">Cadastrar paciente</a></button>
             <img src="assets/imagem_logo.png" alt="Logo do Aplicativo" class="logo-footer">
         </footer>
     </main>
+
+    <!-- Navbar scripts -->
+    <script src="script-navbar.js"></script>
+
+    <!-- Vue scripts -->
+    <script src="script-vue.js"></script>
+
 </body>
 </html>

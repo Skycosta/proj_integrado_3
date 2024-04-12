@@ -1,16 +1,40 @@
 var sidebarHidden = false;
+var breakpoint = 768;
+var currentWidth = window.innerWidth;
+var menuLateral = document.getElementById("menu-lateral");
+var main = document.getElementsByTagName("main").item(0);
+var arrow = document.getElementById("arrow-accordion");
 
-function toggleSidebar() {
-    if (sidebarHidden) {
-        $(".btn-accordion img").removeClass("invert");
-        $("#menu-lateral").removeClass("hidden");
-        $("main").removeClass("hidden");
-    } else {
-        $(".btn-accordion img").addClass("invert")
-        $("#menu-lateral").addClass("hidden");
-        $("main").addClass("hidden");
-    }
-    sidebarHidden=!sidebarHidden;
+function showSidebar() {
+    menuLateral.style.transform = "translateX(0)";
+    main.style.paddingLeft = '270px';
+    arrow.style.transform = "scaleX(-100%)"
+    sidebarHidden = false;
 }
 
-$(".btn-accordion").on("click", toggleSidebar);
+function hideSidebar() {
+    menuLateral.style.transform = "translateX(-100%)";
+    main.style.paddingLeft = '0px';
+    arrow.style.transform = "scaleX(100%)"
+    sidebarHidden = true;
+}
+
+function toggleSidebar() {
+    if (sidebarHidden)
+        showSidebar();
+    else
+        hideSidebar();
+}
+
+window.addEventListener("resize", (event) => {
+    currentWidth = window.innerWidth;
+    console.log(currentWidth<768, !sidebarHidden)
+
+    if (currentWidth<768 && !sidebarHidden) {
+        hideSidebar();
+    }
+
+    if (currentWidth>=768 && sidebarHidden) {
+        showSidebar();
+    }
+})
